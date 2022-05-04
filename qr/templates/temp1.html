@@ -149,7 +149,7 @@
             <div class="pb-4 display-1 text-center text-light">Make QR</div>
             <form class="input text-center mb-3 mt-5" method="post" action="/result">
               {%csrf_token%}
-              <input type="text" name="text" class="form-control" placeholder="Enter your text/link here" aria-describedby="button-addon2"><br>
+              <input type="text" name="text" class="form-control" placeholder="Enter your text/link here" aria-describedby="button-addon2" required><br>
               <input class="btn btn-outline-light btn-lg" type="submit" id="button-addon2"></input>
             </form>
           </div>

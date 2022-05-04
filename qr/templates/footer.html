@@ -1,44 +1,45 @@
 <div class="container-fluid pt-5" style="background-color: #1d2228;" id="feedback">
-    <div class="container">
-      <div class="display-1 text-center text-light pb-5" >Feedback</div>
-      <form class="pt-5 pb-5 px-5">
-        <div class="row px-5">
-          <div class="col-sm-6">
-            <div class="row mb-3">
-              <div class="text-light h3">First Name</div>
-              <div class="col-sm-10">
-                <input type="text" class="form-control" >
-              </div>
+  <div class="container">
+    <div class="display-1 text-center text-light pb-5" >Feedback</div>
+    <form class="pt-5 pb-5 px-5" method="post" action="/feedback">
+      {%csrf_token%}
+      <div class="row px-5">
+        <div class="col-sm-6">
+          <div class="row mb-3">
+            <div class="text-light h3">First Name</div>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" required name="fname">
             </div>
           </div>
-          <div class="col-sm-6">
-            <div class="row mb-3">
-              <div class="text-light h3">Last Name</div>
-              <div class="col-sm-10">
-                <input type="text" class="form-control" >
-              </div>
+        </div>
+        <div class="col-sm-6">
+          <div class="row mb-3">
+            <div class="text-light h3">Last Name</div>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" required name="lname">
             </div>
           </div>
-          <div class="col-sm-11">
-            <div class="row mb-3">
-              <div class="text-light h3">Email</div>
-              <div class="col-sm">
-                <input type="email" class="form-control" id="inputEmail3">
-              </div>
+        </div>
+        <div class="col-sm-11">
+          <div class="row mb-3">
+            <div class="text-light h3">Email</div>
+            <div class="col-sm">
+              <input type="email" class="form-control" id="inputEmail3" required name="email">
             </div>
+          </div>
         </div>
         
-      <div class="mb-3 col-sm-11">
-        <label for="exampleFormControlTextarea1" class="form-label text-light h3">Comments</label>
-        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-      </div>
-      <div class="text-center">
-        <button type="button" class="btn btn-primary btn-lg my-3">submit</button>
-      </div>
+        <div class="mb-3 col-sm-11">
+          <label for="exampleFormControlTextarea1" class="form-label text-light h3">Comments</label>
+          <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" required name="comment"></textarea>
+        </div>
+        <div class="text-center">
+          <button type="submit" class="btn btn-primary btn-lg my-3">submit</button>
+        </div>
      
-      </form>
+    </form>
       
-    </div>
+  </div>
     
 </div>
 
